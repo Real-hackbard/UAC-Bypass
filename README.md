@@ -55,25 +55,25 @@ Tasks that require administrator privileges will trigger a UAC prompt (if UAC is
 * Running an Application as an Administrator
 * Changes to system-wide settings
 * Changes to files in folders that standard users don't have permissions for (such as %SystemRoot% or %ProgramFiles% in most cases)
-* Changes to an access control list (ACL), commonly referred to as file or folder permissions
+* Changes to an [access control list](https://en.wikipedia.org/wiki/Access-control_list) (ACL), commonly referred to as file or folder permissions
 * Installing and uninstalling applications outside of:
-    * The %USERPROFILE% (e.g. C:\Users\{logged in user}) folder and its sub-folders.
-      * Most of the time this is in %APPDATA%. (e.g. C:\Users\{logged in user}\AppData), by default, this is a hidden folder.
+    * The [%USERPROFILE%](https://en.wikipedia.org/wiki/Environment_variable#USERPROFILE) (e.g. C:\Users\{logged in user}) folder and its sub-folders.
+      * Most of the time this is in %APPDATA%. (e.g. C:\Users\{logged in user}\AppData), by default, this is a [hidden folder](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory#DOS_and_MS_Windows).
         * Chrome's and Firefox's installer ask for admin rights during install, if given, Chrome will install in the Program Files folder and be usable for all users, if     denied, Chrome will install in the %APPDATA% folder instead and only be usable by the current user.
-* The Microsoft Store.
+* The [Microsoft Store](https://en.wikipedia.org/wiki/Microsoft_Store).
 * The folder of the installer and its sub-folders.
-  * Steam installs its games in the /steamapps/ sub-folder, thus not prompting UAC. Some games require prerequisites to be installed, which may prompt UAC.
+  * [Steam](https://en.wikipedia.org/wiki/Steam_(service)) installs its games in the /steamapps/ sub-folder, thus not prompting UAC. Some games require prerequisites to be installed, which may prompt UAC.
 * Installing device drivers
-* Installing ActiveX controls
-* Changing settings for Windows Firewall
+* Installing [ActiveX](https://en.wikipedia.org/wiki/ActiveX) controls
+* Changing settings for [Windows Firewall](https://en.wikipedia.org/wiki/Windows_Firewall)
 * Changing UAC settings
-* Configuring Windows Update
+* Configuring [Windows Update](https://en.wikipedia.org/wiki/Windows_Update)
 * Adding or removing user accounts
 * Changing a user's account name or type
 * Turning on Guest account (Windows 7 to 8.1)
 * Turning on network discovery, file and printer sharing, Public folder sharing, turning off password protected sharing or turning on media streaming
 * Configuring Parental Controls (in Windows 7) or Family Safety (Windows 8.1)
-* Running Task Scheduler
+* Running [Task Scheduler](https://en.wikipedia.org/wiki/Windows_Task_Scheduler)
 * Backing up and restoring folders and files
 * Merging and deleting network locations
 * Turning on or cleaning logging in Remote Access Preferences
@@ -81,14 +81,14 @@ Tasks that require administrator privileges will trigger a UAC prompt (if UAC is
 * Changing remote, system protection or advanced system settings
 * Restoring backed-up system files
 * Viewing or changing another user's folders and files
-* Running Disk Defragmenter, System Restore or Windows Easy Transfer (Windows 7 to 8.1)
-* Running Registry Editor
+* Running [Disk Defragmenter](https://en.wikipedia.org/wiki/Microsoft_Drive_Optimizer), [System Restore](https://en.wikipedia.org/wiki/System_Restore) or [Windows Easy Transfer](https://en.wikipedia.org/wiki/Windows_Easy_Transfer) (Windows 7 to 8.1)
+* Running [Registry Editor](https://en.wikipedia.org/wiki/Windows_Registry#Manual_editing)
 * Running the Windows Experience Index assessment
 * Troubleshoot audio recording and playing, hardware / devices and power use
 * Change power settings, turning off Windows features, uninstall, change or repair a program
 * Change date and time and synchronizing with an Internet time server
 * Installing and uninstalling display languages
-* Change Ease of Access administrative settings
+* Change [Ease of Access](https://en.wikipedia.org/wiki/Ease_of_Access) administrative settings
 
 
 
