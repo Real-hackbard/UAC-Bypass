@@ -90,5 +90,111 @@ Tasks that require administrator privileges will trigger a UAC prompt (if UAC is
 * Installing and uninstalling display languages
 * Change [Ease of Access](https://en.wikipedia.org/wiki/Ease_of_Access) administrative settings
 
+### Set Administrator Privilegs Example:
+```pascal
+function SetTokenPrivilege(const APrivilege: string; const AEnable: Boolean): Boolean;
+var
+  LToken: THandle;
+  LTokenPriv: TOKEN_PRIVILEGES;
+  LPrevTokenPriv: TOKEN_PRIVILEGES;
+  LLength: Cardinal;
+  LErrval: Cardinal;
+begin
+  Result := False;
+  if OpenProcessToken(GetCurrentProcess, TOKEN_ADJUST_PRIVILEGES or TOKEN_QUERY, LToken) then
+  try
+    // Get the locally unique identifier (LUID) .
+    if LookupPrivilegeValue(nil, PChar(APrivilege), LTokenPriv.Privileges[0].Luid) then
+    begin
+      LTokenPriv.PrivilegeCount := 1; // one privilege to set
+      case AEnable of
+        True: LTokenPriv.Privileges[0].Attributes := SE_PRIVILEGE_ENABLED;
+        False: LTokenPriv.Privileges[0].Attributes := 0;
+      end;
+      LPrevTokenPriv := LTokenPriv;
+      // Enable or disable the privilege
+      Result := AdjustTokenPrivileges(LToken, False, LTokenPriv, SizeOf(LPrevTokenPriv), LPrevTokenPriv, LLength);
+    end;
+  finally
+    CloseHandle(LToken);
+  end;
+end;
+```
 
+### Check Administrator Privilegs Example:
+```pascal
+procedure SHSetInstanceExplorer(const punk: IUnknown); stdcall;
+{$EXTERNALSYM SHSetInstanceExplorer}
+function IsUserAnAdmin: BOOL; stdcall;
+{$EXTERNALSYM IsUserAnAdmin}
 
+{..}
+
+function GetAdminSid: PSID;
+const
+  SECURITY_NT_AUTHORITY: TSIDIdentifierAuthority = (Value: (0, 0, 0, 0, 0, 5));
+  SECURITY_BUILTIN_DOMAIN_RID: DWORD = $00000020;
+  DOMAIN_ALIAS_RID_ADMINS: DWORD = $00000220;  
+begin  
+  Result := nil;  
+  AllocateAndInitializeSid(SECURITY_NT_AUTHORITY, 2,  
+    SECURITY_BUILTIN_DOMAIN_RID, DOMAIN_ALIAS_RID_ADMINS,  
+    0, 0, 0, 0, 0, 0, Result);  
+end;
+
+function IsAdmin: LongBool;
+var  
+  TokenHandle: THandle;  
+  ReturnLength: DWORD;  
+  TokenInformation: PTokenGroups;  
+  AdminSid: PSID;  
+  Loop: Integer;  
+begin  
+  Result := False;  
+  TokenHandle := 0;  
+  if OpenProcessToken(GetCurrentProcess, TOKEN_QUERY, TokenHandle) then  
+  try  
+    ReturnLength := 0;  
+    GetTokenInformation(TokenHandle, TokenGroups, nil, 0, ReturnLength);  
+    TokenInformation := GetMemory(ReturnLength);  
+    if Assigned(TokenInformation) then  
+    try  
+      if GetTokenInformation(TokenHandle, TokenGroups, TokenInformation,  
+        ReturnLength, ReturnLength) then  
+      begin  
+        AdminSid := GetAdminSid;  
+        for Loop := 0 to TokenInformation^.GroupCount - 1 do  
+        begin
+          // Not Compatible with new VCL
+          //if EqualSid(TokenInformation^.Groups[Loop].Sid, AdminSid) then
+          //begin
+           // Result := True;
+            //Break;
+          //end;
+        end;  
+        FreeSid(AdminSid);  
+      end;  
+    finally  
+      FreeMemory(TokenInformation);  
+    end;  
+  finally  
+    CloseHandle(TokenHandle); 
+ end;
+end;
+```
+
+### Disable UAC manual:
+1. Open UAC Settings:
+   * Click the Start button or right-click the Start button and select Search. 
+   * Type UAC in the search field and select Change User Account Control settings from the results. 
+2. Adjust the Slider:
+   * In the User Account Control Settings window, find the slider. 
+   * Drag the slider all the way down to the Never notify setting. 
+3. Confirm the Change:
+   * Click OK to apply the new setting. 
+   * If prompted by a UAC prompt, select Yes or provide an administrator password. 
+   * A computer reboot may be necessary for the change to fully take effect. 
+
+### Important Considerations:
+You must have administrator privileges to disable UAC. 
+Disabling UAC reduces your computer's security, making it more vulnerable to malware and other threats. Consider only disabling UAC if you understand the risks or have specific needs. 
