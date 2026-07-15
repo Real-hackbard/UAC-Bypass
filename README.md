@@ -51,3 +51,8 @@ Operating systems on mainframes and on servers have differentiated between [supe
 | 3     | Prompt for credentials (legacy).     |
 | 4     | Prompt for consent (legacy).     |
 | 5     |  Prompt for consent for non-Windows applications only.     |
+
+</br>
+
+# Registry privileges:
+Windows registry privileges control access to creating, reading, and modifying registry keys. Standard users can read most keys and write to ```HKEY_CURRENT_USER```, but modifying system-wide settings in ```HKEY_LOCAL_MACHINE``` requires administrator privileges and elevated execution permissions.
