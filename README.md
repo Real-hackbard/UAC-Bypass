@@ -145,6 +145,8 @@ Setting the level attribute for requestedExecutionLevel to "asInvoker" will make
 # Jump to Registry Key:
 To jump directly to a specific registry key, copy the full path and paste it into the address bar located directly below the menu bar in the Registry Editor (regedit). Alternatively, use the following code...
 
+### :speech_balloon: Code example
+
 ```pascal
 { In Delphi, you can force the Windows Registry Editor (regedit.exe)
   to automatically jump directly to a specific registry key by modifying
