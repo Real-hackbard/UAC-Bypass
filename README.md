@@ -56,3 +56,42 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 # Registry privileges:
 Windows registry privileges control access to creating, reading, and modifying registry keys. Standard users can read most keys and write to ```HKEY_CURRENT_USER```, but modifying system-wide settings in ```HKEY_LOCAL_MACHINE``` requires administrator privileges and elevated execution permissions.
+
+Grant these permissions to the program.
+
+### :speech_balloon: Code example
+```pascal
+{ a complete, ready-to-use method that retrieves all privileges of the
+  current process and writes them—along with their current status
+  (enabled, disabled, or enabled by default)—into a list of strings. }
+function SetTokenPrivilege(const APrivilege: string; const AEnable: Boolean): Boolean;
+var
+  LToken: THandle;
+  LTokenPriv: TOKEN_PRIVILEGES;
+  LPrevTokenPriv: TOKEN_PRIVILEGES;
+  LLength: Cardinal;
+  LErrval: Cardinal;
+begin
+  Result := False;
+  if OpenProcessToken(GetCurrentProcess, TOKEN_ADJUST_PRIVILEGES or TOKEN_QUERY, LToken) then
+  try
+    // Get the locally unique identifier (LUID) .
+    if LookupPrivilegeValue(nil, PChar(APrivilege), LTokenPriv.Privileges[0].Luid) then
+    begin
+      // one privilege to set
+      LTokenPriv.PrivilegeCount := 1;
+      case AEnable of
+        True: LTokenPriv.Privileges[0].Attributes := SE_PRIVILEGE_ENABLED;
+        False: LTokenPriv.Privileges[0].Attributes := 0;
+      end;
+      LPrevTokenPriv := LTokenPriv;
+      // Enable or disable the privilege
+      Result := AdjustTokenPrivileges(LToken, False, LTokenPriv, SizeOf(LPrevTokenPriv), LPrevTokenPriv, LLength);
+    end;
+  finally
+    CloseHandle(LToken);
+  end;
+end;
+```
+
+</br>
