@@ -139,3 +139,78 @@ A program can request elevation in a number of different ways. One way for progr
 ```
 
 Setting the level attribute for requestedExecutionLevel to "asInvoker" will make the application run with the token that started it, "highestAvailable" will present a UAC prompt for administrators and run with the usual reduced privileges for standard users, and "requireAdministrator" will require elevation. In both highestAvailable and requireAdministrator modes, failure to provide confirmation results in the program not being launched.
+
+</br>
+
+# Jump to Registry Key:
+To jump directly to a specific registry key, copy the full path and paste it into the address bar located directly below the menu bar in the Registry Editor (regedit). Alternatively, use the following code...
+
+```pascal
+{ In Delphi, you can force the Windows Registry Editor (regedit.exe)
+  to automatically jump directly to a specific registry key by modifying
+  the LastKey value inside the Regedit applet registry before launching it. }
+procedure TForm1.JumpToKey(Key: string);
+var
+  i, n: Integer;
+  hWin: HWND;
+  ExecInfo: ShellExecuteInfoA;
+begin
+  hWin := FindWindowA(PAnsiChar('RegEdit_RegEdit'), nil);
+  if hWin = 0 then
+  {if Regedit doesn't run then we launch it}
+  begin
+    // transmit information
+    FillChar(ExecInfo, 60, #0);
+    with ExecInfo do
+    begin
+      cbSize := 60;
+      { informs the Windows operating system that the process handle of
+        the launched application should be kept open in the hProcess field
+        of the TShellExecuteInfo structure. }
+      fMask  := SEE_MASK_NOCLOSEPROCESS;
+      lpVerb := PAnsiChar('open');
+      lpFile := PAnsiChar('regedit.exe');
+      nShow  := 1;
+    end;
+
+    // execute process
+    ShellExecuteExA(@ExecInfo);
+
+    { pauses the execution of the current thread until a newly started
+      process has completed its initialization }
+    WaitForInputIdle(ExecInfo.hProcess, 200);
+    hWin := FindWindowA(PAnsiChar('RegEdit_RegEdit'), nil);
+  end;
+
+  // show the windows regitsry
+  ShowWindow(hWin, SW_SHOWNORMAL);
+  // find the registry gui
+  hWin := FindWindowExA(hWin, 0, PAnsiChar('SysTreeView32'), nil);
+  // set windows registry top
+  SetForegroundWindow(hWin);
+  i := 30;
+
+  repeat
+    // simulate on key down
+    SendMessageA(hWin, WM_KEYDOWN, VK_LEFT, 0);
+    Dec(i);
+  until i = 0;
+
+  // the waiting time (ms) for switching the path in the registry (can be changed)
+  Sleep(150);
+  SendMessageA(hWin, WM_KEYDOWN, VK_RIGHT, 0);
+  Sleep(150);
+  i := 1;
+  n := Length(Key);
+  repeat
+    if Key[i] = '\' then
+    begin
+      SendMessageA(hWin, WM_KEYDOWN, VK_RIGHT, 0);
+      Sleep(150);
+    end
+    else
+      SendMessageA(hWin, WM_CHAR, Integer(Key[i]), 0);
+    i := i + 1;
+  until i = n;
+end;
+```
