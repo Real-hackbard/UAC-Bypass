@@ -36,3 +36,9 @@ Operating systems on mainframes and on servers have differentiated between [supe
 | on     | Fordert jedes Mal eine Zustimmung an, wenn Apps Software installieren oder Änderungen an Windows vornehmen.     |
 
 * ```Administrator UAC```
+* When an administrator account triggers the User Account Control (UAC) Admin Approval Mode, Windows silently strips administrative rights and runs the process as a standard user. If an app requests full system access, UAC halts execution and displays a prompt requiring the admin to explicitly approve the elevation of privileges.
+
+| Überschrift 1 | Überschrift 2 |
+| :-----------: | :-----------: |
+| Zelle 1,1     | Zelle 1,2     |
+| Zelle 2,1     | Zelle 2,2     |
