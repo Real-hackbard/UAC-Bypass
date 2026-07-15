@@ -96,7 +96,7 @@ end;
 
 </br>
 
-### Admin execute
+### Admin execute:
 Running a program with administrator privileges  
 In addition, the program includes two different resources.
 
@@ -122,7 +122,7 @@ In addition, the program includes two different resources.
 </assembly>
 ```
 
-### Requesting elevation
+### Requesting elevation:
 A program can request elevation in a number of different ways. One way for program developers is to add a requestedPrivileges section to an XML document, known as the manifest, that is then embedded into the application. A manifest can specify dependencies, visual styles, and now the appropriate security context:
 
 ```xml
