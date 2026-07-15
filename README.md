@@ -12,5 +12,13 @@
 
 User Account Control (UAC) is a [mandatory access control](https://en.wikipedia.org/wiki/Mandatory_access_control) enforcement feature introduced with [Microsoft's Windows Vista](https://en.wikipedia.org/wiki/Windows_Vista) and Windows Server 2008 operating systems, with a more relaxed[2] version also present in the versions after Vista, being Windows 7, Windows Server 2008 R2, Windows 8, Windows Server 2012, Windows 8.1, Windows Server 2012 R2, Windows 10, and Windows 11. It aims to improve the security of Microsoft Windows by limiting application software to standard [user privileges](https://en.wikipedia.org/wiki/Privilege_(computing)) until an administrator authorises an increase or elevation. In this way, only applications trusted by the user may receive [administrative privileges](https://en.wikipedia.org/wiki/System_administrator) and malware are kept from compromising the operating system. In other words, a user account may have administrator privileges assigned to it, but applications that the user runs do not inherit those privileges unless they are approved beforehand or the user explicitly authorises it.
 
+</br>
+
+<img src="https://github.com/user-attachments/assets/7c5086cb-d186-4744-8831-9aad98e8f76b" />
+
+</br>
+
+UAC uses [Mandatory Integrity Control](https://en.wikipedia.org/wiki/Mandatory_Integrity_Control) to isolate running processes with different privileges. To reduce the possibility of lower-privilege applications communicating with higher-privilege ones, another new technology, User Interface Privilege Isolation, is used in conjunction with User Account Control to isolate these processes from each other.[3] One prominent use of this is Internet Explorer 7's "Protected Mode".
+
 
 
