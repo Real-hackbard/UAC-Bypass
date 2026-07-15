@@ -39,7 +39,11 @@ Operating systems on mainframes and on servers have differentiated between [supe
     * When an administrator account triggers the User Account Control (UAC) Admin Approval Mode, Windows silently strips administrative rights and runs the process as a standard user. If an app requests full system access, UAC halts execution and displays a prompt requiring the admin to explicitly approve the elevation of privileges.
     * RegKey : ```HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\ConsentPromptBehaviorAdmin```
 
-| Überschrift 1 | Überschrift 2 |
-| :-----------: | :-----------: |
-| Zelle 1,1     | Zelle 1,2     |
-| Zelle 2,1     | Zelle 2,2     |
+| Value | Description |
+| :----------- | :----------- |
+| 0     | No prompt. The system automatically elevates privileges without asking the user.     |
+| 1     | Prompt for credentials on the secure desktop. The administrator must type their username and password.     |
+| 2     | Prompt for consent on the secure desktop. The administrator clicks "Yes" or "No".     |
+| 3     | Prompt for credentials (legacy).     |
+| 4     | Prompt for consent (legacy).     |
+| 5     |  Prompt for consent for non-Windows applications only.     |
