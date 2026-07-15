@@ -217,7 +217,7 @@ begin
 end;
 ```
 
-# Maual disable UAC:
+# Manual disable UAC:
 To manually disable User Account Control (UAC) on Windows, open the Start menu, search for UAC, and select Change User Account Control settings. Drag the slider down to Never notify and click OK. Restart your PC to apply the changes.
 
 If you need to completely disable UAC deep in the system, you can edit the Windows Registry:
