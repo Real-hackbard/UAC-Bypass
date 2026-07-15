@@ -19,7 +19,11 @@ User Account Control (UAC) is a [mandatory access control](https://en.wikipedia.
 </br>
 </br>
 
-UAC uses [Mandatory Integrity Control](https://en.wikipedia.org/wiki/Mandatory_Integrity_Control) to isolate running processes with different privileges. To reduce the possibility of lower-privilege applications communicating with higher-privilege ones, another new technology, User Interface Privilege Isolation, is used in conjunction with User Account Control to isolate these processes from each other.[3] One prominent use of this is Internet Explorer 7's "Protected Mode".
+UAC uses [Mandatory Integrity Control](https://en.wikipedia.org/wiki/Mandatory_Integrity_Control) to isolate running processes with different privileges. To reduce the possibility of lower-privilege applications communicating with higher-privilege ones, another new technology, User Interface Privilege Isolation, is used in conjunction with User Account Control to isolate these processes from each other. One prominent use of this is Internet Explorer 7's "Protected Mode".
 
+Operating systems on mainframes and on servers have differentiated between [superusers](https://en.wikipedia.org/wiki/Superuser) and [userland](https://en.wikipedia.org/wiki/User_space_and_kernel_space#USERLAND) for decades. This had an obvious security component, but also an administrative component, in that it prevented users from accidentally changing system settings.
 
+</br>
+
+# :wrench: Functions:
 
