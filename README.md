@@ -30,5 +30,5 @@ Operating systems on mainframes and on servers have differentiated between [supe
 | Mode | Description |
 | :----------- | :----------- |
 | off     | Never notify (Least secure): Disables all UAC prompts, allowing administrator-level changes without confirmation.     |
-| be quiet     | Notify me only when apps try to make changes (Do not dim my desktop): Same as above, but without switching to the secure desktop.     |
+| be  quiet     | Notify me only when apps try to make changes (Do not dim my desktop): Same as above, but without switching to the secure desktop.     |
 | on     | Fordert jedes Mal eine Zustimmung an, wenn Apps Software installieren oder Änderungen an Windows vornehmen.     |
