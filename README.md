@@ -95,3 +95,45 @@ end;
 ```
 
 </br>
+
+# Admin execute
+Running a program with administrator privileges  
+In addition, the program includes two different resources.
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+  <assemblyIdentity version="1.0.0.0" processorArchitecture="*" name="MyAppAssemblyNameHere" type="win32"/>
+  <description>My App Description</description>
+  <!-- uncomment this to enable ComCtl v6 Visual Styles...
+  <dependency>
+    <dependentAssembly>
+      <assemblyIdentity type="win32" name="Microsoft.Windows.Common-Controls" version="6.0.0.0" processorArchitecture="*" publicKeyToken="6595b64144ccf1df" language="*"/>
+    </dependentAssembly>
+  </dependency>
+  -->
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
+    <security>
+      <requestedPrivileges>
+        <requestedExecutionLevel level="requireAdministrator" uiAccess="false"/>
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+</assembly>
+```
+
+# Requesting elevation
+A program can request elevation in a number of different ways. One way for program developers is to add a requestedPrivileges section to an XML document, known as the manifest, that is then embedded into the application. A manifest can specify dependencies, visual styles, and now the appropriate security context:
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
+    <security>
+      <requestedPrivileges>
+        <requestedExecutionLevel level="highestAvailable" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+</assembly>
+```
