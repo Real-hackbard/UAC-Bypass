@@ -137,3 +137,5 @@ A program can request elevation in a number of different ways. One way for progr
   </trustInfo>
 </assembly>
 ```
+
+Setting the level attribute for requestedExecutionLevel to "asInvoker" will make the application run with the token that started it, "highestAvailable" will present a UAC prompt for administrators and run with the usual reduced privileges for standard users, and "requireAdministrator" will require elevation. In both highestAvailable and requireAdministrator modes, failure to provide confirmation results in the program not being launched.
