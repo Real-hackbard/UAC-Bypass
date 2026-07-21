@@ -8,7 +8,8 @@ currently being supported with security updates.
 | Version | Supported          |
 | ------- | ------------------ |
 | 1.0.x   | :white_check_mark: |
-| 1.0.x   | :white_check_mark: Add Requesting elevation resource; Add uac admin behavior to fix be quite mode; load images from file|
+| 1.1.x   | :white_check_mark: Add Requesting elevation resource; Add uac admin behavior to fix be quite mode; load images from file|
+| 1.2.x   | :white_check_mark: Add UAC Key functions; Detect automatic registry settings |
 
 ## Reporting a Vulnerability
 
