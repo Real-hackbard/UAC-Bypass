@@ -62,6 +62,18 @@ Operating systems on mainframes and on servers have differentiated between [supe
 | ```0```     | Built-in Administrator operates with full privileges and UAC prompts are disabled (Default).     |
 | ```1```     | Built-in Administrator operates in Admin Approval Mode and triggers UAC prompts for elevated tasks.     |
 
+</br>
+
+* ```ConsentPromptBehaviorUser```
+  * The ConsentPromptBehaviorUser registry key dictates how Windows handles administrative permission requests for Standard Users.
+
+| Value | Description |
+| :----------- | :----------- |
+| ```0```     | Operations requiring administrative rights are automatically rejected.     |
+| ```1```     | The user must enter administrator credentials on the secure desktop.     |
+| ```3```     | : You are prompted to enter login information (default).    |
+
+
 
 </br>
 </br>
