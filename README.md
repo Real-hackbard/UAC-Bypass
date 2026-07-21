@@ -105,7 +105,7 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 </br>
 
-* ```EnableUIADesktopToggle```
+* [EnableUIADesktopToggle](https://learn.microsoft.com/en-us/azure/governance/policy/samples/guest-configuration-baseline-windows)
   * The EnableUIADesktopToggle is a Windows Registry setting that controls how User Account Control (UAC) prompts behave. Specifically, it dictates whether certain accessibility programs (like Remote Assistance) can bypass the darkened "Secure Desktop" to display permission prompts directly on your normal screen.
 
 | Value | Description |
