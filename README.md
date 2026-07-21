@@ -91,7 +91,7 @@ Operating systems on mainframes and on servers have differentiated between [supe
 | Value | Description |
 | :----------- | :----------- |
 | ```1```     | (Enabled): Forces Windows to verify the signature of any executable running with elevated rights.     |
-| ```0```     | Value 0 (Disabled): Disables signature enforcement, allowing unsigned executables to run with elevated permissions.     |
+| ```0```     | (Disabled): Disables signature enforcement, allowing unsigned executables to run with elevated permissions.     |
 
 </br>
 
