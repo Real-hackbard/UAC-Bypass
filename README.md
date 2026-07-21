@@ -111,7 +111,17 @@ Operating systems on mainframes and on servers have differentiated between [supe
 | Value | Description |
 | :----------- | :----------- |
 | ```1```     | (Enabled): This allows UIA programs to disable the secure desktop     |
-| ```0```     | (Disabled Recommended/Default)     |
+| ```0```     | (Disabled - Recommended/Default)     |
+
+</br>
+
+* ```PromptOnSecureDesktop```
+  * PromptOnSecureDesktop is a Windows Registry setting that controls how the User Account Control (UAC) displays prompts for administrative changes. When activated, it locks and dims your screen, forcing you to answer an elevation request before doing anything else. This prevents rogue programs from clicking the prompt for you.
+
+| Value | Description |
+| :----------- | :----------- |
+| ```1```     | Enabled (Prompt switches to the Secure Desktop - Recommended/Default)     |
+| ```0```     | Disabled (Prompt appears instantly on the normal desktop)     |
 
 </br>
 
