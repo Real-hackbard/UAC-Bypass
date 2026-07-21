@@ -71,7 +71,7 @@ Operating systems on mainframes and on servers have differentiated between [supe
 | :----------- | :----------- |
 | ```0```     | Operations requiring administrative rights are automatically rejected.     |
 | ```1```     | The user must enter administrator credentials on the secure desktop.     |
-| ```3```     | : You are prompted to enter login information (default).    |
+| ```3```     | You are prompted to enter login information (default).    |
 
 </br>
 
