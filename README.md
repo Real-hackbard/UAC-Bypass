@@ -50,7 +50,7 @@ Operating systems on mainframes and on servers have differentiated between [supe
 | ```2```     | Prompt for consent on the secure desktop. The administrator clicks "Yes" or "No".     |
 | ```3```     | Prompt for credentials (legacy).     |
 | ```4```     | Prompt for consent (legacy).     |
-| ```5```     |  Prompt for consent for non-Windows applications only.     |
+| ```5```     | Prompt for consent for non-Windows applications only.     |
 
 </br>
 
@@ -72,6 +72,18 @@ Operating systems on mainframes and on servers have differentiated between [supe
 | ```0```     | Operations requiring administrative rights are automatically rejected.     |
 | ```1```     | The user must enter administrator credentials on the secure desktop.     |
 | ```3```     | : You are prompted to enter login information (default).    |
+
+</br>
+
+* ```EnableInstallerDetection```
+  * The EnableInstallerDetection registry entry controls the automatic detection of installers in Windows. When this feature is enabled, the system looks for keywords such as "Install" or "Setup" in file names and automatically requests the administrator privileges required for installation upon execution.
+
+| Value | Description |
+| :----------- | :----------- |
+| ```0```     | Enabled (default): Windows automatically detects installers and requests elevated privileges.     |
+| ```1```     | = Disabled: Automatic detection is turned off.     |
+
+</br>
 
 
 
