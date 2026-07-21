@@ -80,8 +80,8 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 | Value | Description |
 | :----------- | :----------- |
-| ```0```     | Enabled (default): Windows automatically detects installers and requests elevated privileges.     |
-| ```1```     | Disabled: Automatic detection is turned off.     |
+| ```1```     | Enabled (default): Windows automatically detects installers and requests elevated privileges.     |
+| ```0```     | Disabled: Automatic detection is turned off.     |
 
 </br>
 
@@ -90,8 +90,18 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 | Value | Description |
 | :----------- | :----------- |
-| ```0```     | (Enabled): Forces Windows to verify the signature of any executable running with elevated rights.     |
-| ```1```     | Value 0 (Disabled): Disables signature enforcement, allowing unsigned executables to run with elevated permissions.     |
+| ```1```     | (Enabled): Forces Windows to verify the signature of any executable running with elevated rights.     |
+| ```0```     | Value 0 (Disabled): Disables signature enforcement, allowing unsigned executables to run with elevated permissions.     |
+
+</br>
+
+* ```EnableSecureUIAPaths```
+  * The EnableSecureUIAPaths registry key is a core User Account Control (UAC) policy that restricts how specialized apps request system privileges.
+
+| Value | Description |
+| :----------- | :----------- |
+| ```1```     | (Enabled - Recommended/Default): Restricts UIAccess applications to secure system paths.     |
+| ```0```     | (Disabled): Allows UIAccess applications to run from any location on the system.     |
 
 </br>
 
