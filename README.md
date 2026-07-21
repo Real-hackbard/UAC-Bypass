@@ -27,7 +27,7 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 # :wrench: Functions:
 
-* ```User UAC (EnableLUA)```
+* [User UAC (EnableLUA)](https://learn.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/microsoft-windows-lua-settings-enablelua)
   * UAC (User Account Control) settings in Windows are primarily controlled via the following registry key:
   * RegKey : ```HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\EnableLUA```
 
