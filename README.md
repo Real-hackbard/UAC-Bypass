@@ -75,7 +75,7 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 </br>
 
-* ```EnableInstallerDetection```
+* [EnableInstallerDetection](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-gpsb/c2b4efc5-2fe8-4dc9-95f7-2417b3d4cc6d)
   * The EnableInstallerDetection registry entry controls the automatic detection of installers in Windows. When this feature is enabled, the system looks for keywords such as "Install" or "Setup" in file names and automatically requests the administrator privileges required for installation upon execution.
 
 | Value | Description |
