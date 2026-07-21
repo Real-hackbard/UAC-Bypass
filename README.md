@@ -125,6 +125,14 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 </br>
 
+* ```EnableVirtualization```
+  * The EnableVirtualization registry key manages UAC (User Account Control) virtualization in Windows. It redirects legacy app attempts to write to protected system directories or registry keys into user-specific locations. By default, it is Enabled (1) to prevent older apps from crashing.
+
+| Value | Description |
+| :----------- | :----------- |
+| ```1```     | Enabled (Default)     |
+| ```0```     | Disabled      |
+
 
 
 </br>
