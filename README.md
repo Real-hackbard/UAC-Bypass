@@ -33,9 +33,9 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 | Mode | Description |
 | :----------- | :----------- |
-| off     | Never notify (Least secure): Disables all UAC prompts, allowing administrator-level changes without confirmation.     |
-| quiet     | Notify me only when apps try to make changes (Do not dim my desktop): Same as above, but without switching to the secure desktop.     |
-| on     | Fordert jedes Mal eine Zustimmung an, wenn Apps Software installieren oder Änderungen an Windows vornehmen.     |
+| ```off```     | Never notify (Least secure): Disables all UAC prompts, allowing administrator-level changes without confirmation.     |
+| ```quiet```     | Notify me only when apps try to make changes (Do not dim my desktop): Same as above, but without switching to the secure desktop.     |
+| ```on```     | Fordert jedes Mal eine Zustimmung an, wenn Apps Software installieren oder Änderungen an Windows vornehmen.     |
 
 </br>
 
@@ -45,12 +45,12 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 | Value | Description |
 | :----------- | :----------- |
-| 0     | No prompt. The system automatically elevates privileges without asking the user.     |
-| 1     | Prompt for credentials on the secure desktop. The administrator must type their username and password.     |
-| 2     | Prompt for consent on the secure desktop. The administrator clicks "Yes" or "No".     |
-| 3     | Prompt for credentials (legacy).     |
-| 4     | Prompt for consent (legacy).     |
-| 5     |  Prompt for consent for non-Windows applications only.     |
+| ```0```     | No prompt. The system automatically elevates privileges without asking the user.     |
+| ```1```     | Prompt for credentials on the secure desktop. The administrator must type their username and password.     |
+| ```2```     | Prompt for consent on the secure desktop. The administrator clicks "Yes" or "No".     |
+| ```3```     | Prompt for credentials (legacy).     |
+| ```4```     | Prompt for consent (legacy).     |
+| ```5```     |  Prompt for consent for non-Windows applications only.     |
 
 </br>
 
@@ -59,8 +59,8 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 | Value | Description |
 | :----------- | :----------- |
-| 0     | Built-in Administrator operates with full privileges and UAC prompts are disabled (Default).     |
-| 1     | Built-in Administrator operates in Admin Approval Mode and triggers UAC prompts for elevated tasks.     |
+| ```0```     | Built-in Administrator operates with full privileges and UAC prompts are disabled (Default).     |
+| ```1```     | Built-in Administrator operates in Admin Approval Mode and triggers UAC prompts for elevated tasks.     |
 
 
 </br>
