@@ -135,8 +135,7 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 </br>
 
-User Account Control settings list :  
-[Microsoft](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/settings-and-configuration?tabs=intune#user-account-control-behavior-of-the-elevation-prompt-for-standard-users)
+User Account Control settings list : [Microsoft](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/settings-and-configuration?tabs=intune#user-account-control-behavior-of-the-elevation-prompt-for-standard-users)
 
 </br>
 
