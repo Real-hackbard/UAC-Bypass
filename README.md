@@ -54,7 +54,7 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 </br>
 
-* ```FilterAdministratorToken```
+* [FilterAdministratorToken](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-gpsb/7c705718-f58e-4886-8057-37c8fd9aede1)
   * The FilterAdministratorToken registry key controls how Windows manages permissions for the built-in, default Administrator account. Setting it to 1 enables UAC (User Account Control) for this account, requiring you to approve administrative actions. Setting it to 0 (default) disables UAC, granting full, unrestricted rights at all times.
 
 | Value | Description |
