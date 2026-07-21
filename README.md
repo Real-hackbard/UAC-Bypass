@@ -14,7 +14,7 @@ User Account Control (UAC) is a [mandatory access control](https://en.wikipedia.
 
 </br>
 
-<img src="https://github.com/user-attachments/assets/7c5086cb-d186-4744-8831-9aad98e8f76b" />
+<img src="https://github.com/user-attachments/assets/afb5806f-15a2-43e1-a652-fc0cf263534f" />
 
 </br>
 </br>
