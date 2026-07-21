@@ -115,7 +115,7 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 </br>
 
-* ```PromptOnSecureDesktop```
+* [PromptOnSecureDesktop](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/settings-and-configuration?tabs=intune)
   * PromptOnSecureDesktop is a Windows Registry setting that controls how the User Account Control (UAC) displays prompts for administrative changes. When activated, it locks and dims your screen, forcing you to answer an elevation request before doing anything else. This prevents rogue programs from clicking the prompt for you.
 
 | Value | Description |
