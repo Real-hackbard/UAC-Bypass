@@ -64,7 +64,7 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 </br>
 
-* ```ConsentPromptBehaviorUser```
+* [ConsentPromptBehaviorUser](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-gpsb/15f4f7b3-d966-4ff4-8393-cb22ea1c3a63)
   * The ConsentPromptBehaviorUser registry key dictates how Windows handles administrative permission requests for Standard Users.
 
 | Value | Description |
