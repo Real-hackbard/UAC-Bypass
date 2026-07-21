@@ -57,6 +57,10 @@ Operating systems on mainframes and on servers have differentiated between [supe
 * ```FilterAdministratorToken```
   * The FilterAdministratorToken registry key controls how Windows manages permissions for the built-in, default Administrator account. Setting it to 1 enables UAC (User Account Control) for this account, requiring you to approve administrative actions. Setting it to 0 (default) disables UAC, granting full, unrestricted rights at all times.
 
+| Value | Description |
+| :-----------: | :-----------: |
+| 9     | Built-in Administrator operates with full privileges and UAC prompts are disabled (Default).     |
+| 1     | Built-in Administrator operates in Admin Approval Mode and triggers UAC prompts for elevated tasks.     |
 
 
 </br>
