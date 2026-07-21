@@ -125,7 +125,7 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 </br>
 
-* ```EnableVirtualization```
+* [EnableVirtualization](https://learn.microsoft.com/en-us/windows/security/identity-protection/credential-guard/configure?tabs=intune)
   * The EnableVirtualization registry key manages UAC (User Account Control) virtualization in Windows. It redirects legacy app attempts to write to protected system directories or registry keys into user-specific locations. By default, it is Enabled (1) to prevent older apps from crashing.
 
 | Value | Description |
