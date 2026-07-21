@@ -54,6 +54,14 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 </br>
 
+* ```FilterAdministratorToken```
+  * The FilterAdministratorToken registry key controls how Windows manages permissions for the built-in, default Administrator account. Setting it to 1 enables UAC (User Account Control) for this account, requiring you to approve administrative actions. Setting it to 0 (default) disables UAC, granting full, unrestricted rights at all times.
+
+
+
+</br>
+</br>
+
 # Registry privileges:
 Windows registry privileges control access to creating, reading, and modifying registry keys. Standard users can read most keys and write to ```HKEY_CURRENT_USER```, but modifying system-wide settings in ```HKEY_LOCAL_MACHINE``` requires administrator privileges and elevated execution permissions.
 
