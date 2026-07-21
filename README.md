@@ -39,7 +39,7 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 </br>
 
-* ```Administrator UAC behavior```
+* [Administrator UAC behavior](https://learn.microsoft.com/en-us/answers/questions/1425274/irritating-uac-behavior-in-win11-vs-win10)
    * When an administrator account triggers the User Account Control (UAC) Admin Approval Mode, Windows silently strips administrative rights and runs the process as a standard user. If an app requests full system access, UAC halts execution and displays a prompt requiring the admin to explicitly approve the elevation of privileges.
    * RegKey : ```HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\ConsentPromptBehaviorAdmin```
 
