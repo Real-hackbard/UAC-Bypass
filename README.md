@@ -81,7 +81,7 @@ Operating systems on mainframes and on servers have differentiated between [supe
 | Value | Description |
 | :----------- | :----------- |
 | ```0```     | Enabled (default): Windows automatically detects installers and requests elevated privileges.     |
-| ```1```     | = Disabled: Automatic detection is turned off.     |
+| ```1```     | Disabled: Automatic detection is turned off.     |
 
 </br>
 
