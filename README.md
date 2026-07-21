@@ -95,7 +95,7 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 </br>
 
-* ```EnableSecureUIAPaths```
+* [EnableSecureUIAPaths](https://www.tenable.com/audits/items/MSCT_Windows_Server_2025_MS_v1.0.0.audit:2fd200ee2211b8b1aca2cb8bc6119c74)
   * The EnableSecureUIAPaths registry key is a core User Account Control (UAC) policy that restricts how specialized apps request system privileges.
 
 | Value | Description |
