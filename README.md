@@ -85,7 +85,7 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 </br>
 
-* ```ValidateAdminCodeSignatures```
+* [ValidateAdminCodeSignatures](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-gpsb/a9b816e0-075b-4674-a1a9-cecd1d9523e7)
   * The ValidateAdminCodeSignatures registry key controls how Windows handles security for programs that need special admin rights. Setting it to 1 forces Windows to only run programs with admin rights if their security signature is officially validated. Setting it to 0 turns this security check off.
 
 | Value | Description |
