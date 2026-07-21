@@ -59,7 +59,7 @@ Operating systems on mainframes and on servers have differentiated between [supe
 
 | Value | Description |
 | :----------- | :----------- |
-| 9     | Built-in Administrator operates with full privileges and UAC prompts are disabled (Default).     |
+| 0     | Built-in Administrator operates with full privileges and UAC prompts are disabled (Default).     |
 | 1     | Built-in Administrator operates in Admin Approval Mode and triggers UAC prompts for elevated tasks.     |
 
 
